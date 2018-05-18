@@ -41,8 +41,8 @@ LE_PROGRAME_BIN=`pwd`
 cd "${oldpwd}"
 
 ICON_NAME=$LE_PROGRAME_BASE-$LE_PROGRAME_BASE
-TMP_DIR=`mktemp --directory`
-DESKTOP_FILE="$TMP_DIR/$ICON_NAME.desktop"
+DESK_DIR=$(xdg-user-dir DESKTOP)
+DESKTOP_FILE="$DESK_DIR/$ICON_NAME.desktop"
 cat << EOF > $DESKTOP_FILE
 [Desktop Entry]
 Version=1.0
