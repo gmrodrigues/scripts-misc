@@ -6,5 +6,10 @@
 
 ## Example
 
-bash add-desktop-icon.sh  ./pycharm-community-2018.1.3/bin/pycharm.sh "Pycharm" ./pycharm-community-2018.1.3/bin/pycharm.png 
+```Shell
+bash add-desktop-icon.sh                      \
+  ./pycharm-community-2018.1.3/bin/pycharm.sh \
+  "Pycharm"                                   \
+  ./pycharm-community-2018.1.3/bin/pycharm.png
+```
 
