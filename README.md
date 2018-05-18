@@ -8,8 +8,8 @@
 
 ```Shell
 bash add-desktop-icon.sh                      \
-  ./pycharm-community-2018.1.3/bin/pycharm.sh \
-  "Pycharm"                                   \
-  ./pycharm-community-2018.1.3/bin/pycharm.png
+  ./pycharm-community-2018.1.3/bin/pycharm.sh \ # This is the executable file you are used to run from terminal
+  "Pycharm"                                   \ # Icon description
+  ./pycharm-community-2018.1.3/bin/pycharm.png  # Icon image
 ```
 
