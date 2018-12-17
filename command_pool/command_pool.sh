@@ -20,8 +20,8 @@ if [[ "$1" = "RUN" ]]; then
     TEMP=$2
     MAX_PROCS=$3
     cat "$TEMP" | xargs -I CMD --max-procs=$MAX_PROCS bash -c CMD
-    #rm "$TEMP"
-    echo $TEMP
+    rm "$TEMP"
+    #echo $TEMP
     exit
 fi
 
