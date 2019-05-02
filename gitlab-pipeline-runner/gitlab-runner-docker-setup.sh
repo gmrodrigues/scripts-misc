@@ -7,9 +7,19 @@ export REG_TOKEN=xxxx1G3WxxxxzoZxxxxr
 /etc/docker/daemon.json
 echo '{"storage-driver": "overlay2"}' > /etc/docker/daemon.json
 
-
 mkdir -p /srv/gitlab-runner
-touch /srv/gitlab-runner/config.toml
+
+echo '
+concurrent = 6
+check_interval = 0
+
+[session_server]
+  session_timeout = 1800
+' > /srv/gitlab-runner/config.toml
+
+echo "docker ps -a | awk '{print $1}' | xargs docker rm" >> /srv/gitlab-runner/daily
+echo "docker volume prune -f" >> /srv/gitlab-runner/daily
+echo "docker image ls | grep -E '\.ecr\..+.amazonaws\.com' | awk '{print $3}' | xargs docker rmi -f" >> /srv/gitlab-runner/daily
 
 systemctl restart docker
 docker network create gitlab-runner-net
@@ -20,6 +30,7 @@ docker run -d \
   --restart always \
   --network gitlab-runner-net \
   -v /var/lib/docker \
+  -v /srv/gitlab-runner/daily:/etc/periodic/daily/clean \
   docker:17.06.0-ce-dind \
     --storage-driver=overlay2
 
