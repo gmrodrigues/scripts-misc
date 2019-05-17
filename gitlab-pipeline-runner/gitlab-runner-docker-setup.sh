@@ -20,7 +20,7 @@ check_interval = 0
 echo "#!/bin/sh" >> /srv/gitlab-runner/daily
 echo "docker ps -a | awk '{print $1}' | xargs docker rm" >> /srv/gitlab-runner/daily
 echo "docker volume prune -f" >> /srv/gitlab-runner/daily
-echo "docker image ls | grep -E '\.ecr\..+.amazonaws\.com' | awk '{print $3}' | xargs docker rmi -f" >> /srv/gitlab-runner/daily
+echo "docker image ls | grep -E '(\.ecr\..+.amazonaws\.com|<none>)' | awk '{print $3}' | xargs docker rmi -f" >> /srv/gitlab-runner/daily
 chmod +x /srv/gitlab-runner/daily
 
 systemctl restart docker
