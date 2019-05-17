@@ -52,6 +52,7 @@ docker run -it --rm \
     --docker-image docker:17.06.0-ce \
     --docker-volumes /var/run/docker.sock:/var/run/docker.sock
 
+# Cron 0 0 * * * docker exec -t docker sh /etc/periodic/daily/clean
 
 ###
 # 
