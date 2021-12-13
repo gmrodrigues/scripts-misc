@@ -1,11 +1,20 @@
 #!/bin/bash
 # command to swith to window by process name
 # usefull when you dont know the title of the window to use wmctrl -a alone
-# for example: ./goto-window-switcher.sh youtube-music
+# for example: ./goto-win   dow-switcher.sh youtube-music
 set -x
-CMD_SEARCH_NAME=$*
-CMD_PID=$(ps aux | grep  "$CMD_SEARCH_NAME" | awk '{print $2}' | xargs echo | sed 's/ /|/g')
+CMD_RUN=$1
+CMD_SEARCH=$2
+wmctrl -lx
 
-#sudo apt  install wmctrl
-WINDOW_REF=$(wmctrl -lp | grep -E "($CMD_PID)" | awk '{print $5" "$6" "$7" "$8" "$9" "$10" "}')
- wmctrl -a  $WINDOW_REF
+if [[ !"$CMD_SEARCH"  ]]; then
+    CMD_SEARCH=$CMD_RUN
+fi;
+
+WINDOW_REF=$(wmctrl -lx | grep -i "$CMD_SEARCH" |  awk '{print $5" "$6" "$7" "$8" "$9" "$10" "}' )
+
+if [[ "$WINDOW_REF" ]]; then
+     wmctrl -a  $WINDOW_REF
+else
+    $CMD_RUN || $CMD_SEARCH
+fi;
