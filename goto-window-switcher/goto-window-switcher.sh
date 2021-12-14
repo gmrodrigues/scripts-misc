@@ -7,7 +7,7 @@ CMD_RUN=$1
 CMD_SEARCH=$2
 wmctrl -lx
 
-if [[ !"$CMD_SEARCH"  ]]; then
+if [[ ! "$CMD_SEARCH"  ]]; then
     CMD_SEARCH=$CMD_RUN
 fi;
 
