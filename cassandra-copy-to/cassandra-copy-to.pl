@@ -8,7 +8,7 @@ my $TO_SERVER='177.153.231.114'; # change here
 my $CSV_PATH='/storage/tmp'; # change here
 
 my $KEYSPACE='btg360'; # change here
-my $CQLCMD='cqlsh-astra/bin/cqlsh --connect-timeout=15'; # change here
+my $CQLCMD='cqlsh-astra/bin/cqlsh --connect-timeout=15 --request-timeout=120 '; # change here
 
 my $GREP_TABLES_CMD="grep '_11255'"; # change here
 
