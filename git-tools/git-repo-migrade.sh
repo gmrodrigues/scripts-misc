@@ -4,6 +4,13 @@
 FROM_REPO=$1
 TO_REPO=$2
 
+if [ "$FROM_REPO" = "" ]; then
+    echo "Usage:"
+    echo "$0 <git@from-repo> <git@to-repo>"
+    exit
+fi
+
+
 echo "Danger!!!"
 echo "Are you shure do you want to force push $FROMForce"
 echo "Into $TO_REPO?"
