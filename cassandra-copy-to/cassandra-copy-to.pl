@@ -10,7 +10,7 @@ my $CSV_PATH='/storage/tmp'; # change here
 my $KEYSPACE='btg360'; # change here
 my $CQLCMD='cqlsh-astra/bin/cqlsh --connect-timeout=15 --request-timeout=120 '; # change here
 
-my $GREP_TABLES_CMD="grep '_11255'"; # change here
+my $GREP_TABLES_CMD="grep '_11314'"; # change here
 
 my $help = 1;
 my $time = time();
