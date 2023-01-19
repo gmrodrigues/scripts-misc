@@ -10,7 +10,6 @@ if [ "$FROM_REPO" = "" ]; then
     exit
 fi
 
-
 echo "Danger!!!"
 echo "Are you shure do you want to force push $FROMForce"
 echo "Into $TO_REPO?"
@@ -36,6 +35,10 @@ if [ "$CONT" = "y" ]; then
   echo git remote add origin "$TO_REPO"
   echo git fetch --all
   echo git branch -r
+  echo "########################################################################################"
+  echo "# travar a master de $FROM_REPO e mudar descrição do projeto:"
+  echo "# Projeto migrado para o bitbucket: https://bitbucket.org/smengineering/$(basename $TO_REPO | sed -s 's/.git//')"
+
 else
     echo "Quit"
 fi
