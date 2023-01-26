@@ -35,11 +35,14 @@ if [ "$CONT" = "y" ]; then
   echo ""
   echo "# now go to host and past the following:"
   echo cd  "$FROM_BASEDIR"
+  echo git log -n 1
+  echo 'CURRBRANCH=$(git rev-parse --abbrev-ref HEAD)'
   echo git remote rename origin gitlab
   echo git remote add origin "$TO_REPO"
   echo git fetch --all
   echo git branch -r
   echo git branch --set-upstream-to=origin/$BRANCH
+  echo 'git branch --set-upstream-to=origin/$CURRBRANCH'
   echo "########################################################################################"
   echo "# travar a master de $FROM_REPO e mudar descrição do projeto:"
   echo "# ${FOLLOWUP_INSTRUNCTIONS}: ${TO_REPO_BASE_SITE}$(basename $TO_REPO | sed -s 's/.git//')"
