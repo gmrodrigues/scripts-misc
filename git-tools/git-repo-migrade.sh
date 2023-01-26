@@ -39,9 +39,9 @@ if [ "$CONT" = "y" ]; then
   echo 'CURRBRANCH=$(git rev-parse --abbrev-ref HEAD)'
   echo git remote rename origin gitlab
   echo git remote add origin "$TO_REPO"
-  echo '--------------'
+  echo 'echo --------------'
   echo 'cat ~/.ssh/*.pub'
-  echo '--------------'
+  echo 'echo --------------'
   echo git fetch --all
   echo git branch -r
   echo git branch --set-upstream-to=origin/$BRANCH
