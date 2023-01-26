@@ -1,8 +1,11 @@
 #!/bin/bash
 # script to migrate git repo to other as a mirror
-
 FROM_REPO=$1
 TO_REPO=$2
+
+BRANCH=master
+TO_REPO_BASE_SITE=https://bitbucket.org/smengineering
+FOLLOWUP_INSTRUNCTIONS=Projeto migrado para o bitbucket
 
 if [ "$FROM_REPO" = "" ]; then
     echo "Usage:"
@@ -35,10 +38,10 @@ if [ "$CONT" = "y" ]; then
   echo git remote add origin "$TO_REPO"
   echo git fetch --all
   echo git branch -r
-  echo git branch --set-upstream-to=origin/master
+  echo git branch --set-upstream-to=origin/$BRANCH
   echo "########################################################################################"
   echo "# travar a master de $FROM_REPO e mudar descrição do projeto:"
-  echo "# Projeto migrado para o bitbucket: https://bitbucket.org/smengineering/$(basename $TO_REPO | sed -s 's/.git//')"
+  echo "# $FOLLOWUP_INSTRUNCTIONS: $TO_REPO_BASE_SITE$(basename $TO_REPO | sed -s 's/.git//')"
 
 else
     echo "Quit"
