@@ -16,11 +16,11 @@ if [ "$FROM_REPO" = "" ]; then
 fi
 
 echo "Danger!!!"
-echo "Are you shure do you want to force push $FROMForce"
-echo "Into $TO_REPO?"
-echo "If you continue you will destroy data on"
+echo "Are you shure do you want to destroy $TO_REPO"
+echo "Force and replace it with a copy of $FROM_REPO?"
+echo "If you continue you will force push a copy of"
 echo "  << $FROM_REPO"
-echo "  and replace it with a mirror copy of"
+echo "  and destroy and replace it into"
 echo "  >> $TO_REPO"
 echo "Be carefull: "
 read -p "Continue (y/n)?" CONT
@@ -57,11 +57,11 @@ fi
 # Exemplo de uso:
 # git-tools [glauberrodrigues]> ./git-repo-migrade.sh git@code.allin.com.br:remarketing/BTG-Panel-Multi-Channel.git git@bitbucket.org:smengineering/btg-panel-multi-channel.git
 # Danger!!!
-# Are you shure do you want to force push 
-# Into git@bitbucket.org:smengineering/btg-panel-multi-channel.git?
-# If you continue you will destroy data on
+# Are you shure do you want to destroy git@bitbucket.org:smengineering/btg-panel-multi-channel.git
+# Force and replace it with a copy of git@code.allin.com.br:remarketing/BTG-Panel-Multi-Channel.git?
+# If you continue you will force push a copy of
 #   << git@code.allin.com.br:remarketing/BTG-Panel-Multi-Channel.git
-#   and replace it with a mirror copy of
+#   and destroy and replace it into
 #   >> git@bitbucket.org:smengineering/btg-panel-multi-channel.git
 # Be carefull: 
 # Continue (y/n)?y
