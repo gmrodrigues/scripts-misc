@@ -20,7 +20,7 @@ echo "Are you shure do you want to destroy $TO_REPO"
 echo "Force and replace it with a copy of $FROM_REPO?"
 echo "If you continue you will force push a copy of"
 echo "  << $FROM_REPO"
-echo "  and destroy and replace it into"
+echo "  and force a mirror copy of it into"
 echo "  >> $TO_REPO"
 echo "Be carefull: "
 read -p "Continue (y/n)?" CONT
@@ -61,7 +61,7 @@ fi
 # Force and replace it with a copy of git@code.allin.com.br:remarketing/BTG-Panel-Multi-Channel.git?
 # If you continue you will force push a copy of
 #   << git@code.allin.com.br:remarketing/BTG-Panel-Multi-Channel.git
-#   and destroy and replace it into
+#   and force a mirror copy of it into
 #   >> git@bitbucket.org:smengineering/btg-panel-multi-channel.git
 # Be carefull: 
 # Continue (y/n)?y
