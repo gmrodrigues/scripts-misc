@@ -4,7 +4,6 @@
 FROM_REPO=$1
 TO_REPO=$2
 
-BRANCH=master
 TO_REPO_BASE_SITE='https://bitbucket.org/smengineering/'
 FOLLOWUP_INSTRUNCTIONS='Projeto migrado para o bitbucket'
 
@@ -43,7 +42,6 @@ if [ "$CONT" = "y" ]; then
   echo 'less ~/.ssh/*.pub'
   echo git fetch --all
   echo git branch -r
-  echo git branch --set-upstream-to=origin/$BRANCH
   echo 'git branch --set-upstream-to=origin/$CURRBRANCH'
   echo "########################################################################################"
   echo "# travar a master de $FROM_REPO e mudar descrição do projeto:"
@@ -115,7 +113,6 @@ fi
 # less ~/.ssh/*.pub
 # git fetch --all
 # git branch -r
-# git branch --set-upstream-to=origin/master
 # git branch --set-upstream-to=origin/$CURRBRANCH
 # ########################################################################################
 # # travar a master de git@code.allin.com.br:remarketing/BTG-Panel-Multi-Channel.git e mudar descrição do projeto:
