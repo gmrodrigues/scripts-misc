@@ -42,7 +42,7 @@ if [ "$CONT" = "y" ]; then
   echo 'less ~/.ssh/*.pub'
   echo git fetch --all
   echo git branch -r
-  echo 'git branch --set-upstream-to=origin/$CURRBRANCH'
+  echo 'git branch --set-upstream-to=origin/$CURRBRANCH || echo there wasnt current branch, but its ok'
   echo "########################################################################################"
   echo "# travar a master de $FROM_REPO e mudar descrição do projeto:"
   echo "# ${FOLLOWUP_INSTRUNCTIONS}: ${TO_REPO_BASE_SITE}$(basename $TO_REPO | sed -s 's/.git//')"
