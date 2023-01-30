@@ -37,6 +37,7 @@ if [ "$CONT" = "y" ]; then
   echo cd  "$FROM_BASEDIR"
   echo git log -n 1
   echo 'CURRBRANCH=$(git rev-parse --abbrev-ref HEAD)'
+  echo 'echo branch atual: $CURRBRANCH'
   echo git remote rename origin gitlab
   echo git remote add origin "$TO_REPO"
   echo 'less ~/.ssh/*.pub'
