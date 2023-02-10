@@ -32,7 +32,8 @@ if [ "$CONT" = "y" ]; then
   cd ..
   rm -rf "$FROM_BASEDIR"
   set +xe
-  echo ""
+  echo "########################################################################################"
+  echo '# ......................................................................................'
   echo "# now go to project host and paste the following commands on terminal:"
   echo cd  "$FROM_BASEDIR"
   echo git log -n 1
@@ -46,7 +47,12 @@ if [ "$CONT" = "y" ]; then
   echo 'git branch --set-upstream-to=origin/$CURRBRANCH || echo there wasnt current branch, but its ok'
   echo "########################################################################################"
   echo "# travar a master de $FROM_REPO e mudar descrição do projeto:"
-  echo "# ${FOLLOWUP_INSTRUNCTIONS}: ${TO_REPO_BASE_SITE}$(basename $TO_REPO | sed -s 's/.git//')"
+  echo "# crie um .env (veja .env.sample)"
+  echo "# rode pipenv install && pipenv shell, entao rode"
+  echo "# $>  ./gitlab-lock-repo.py $FROM_REPO"
+  echo "# isso vai proteger todas as branches existentes e mudar a descrição do projeto para"
+  echo "#       ${FOLLOWUP_INSTRUNCTIONS}: ${TO_REPO_BASE_SITE}$(basename $TO_REPO | sed -s 's/.git//')"
+  
 
 else
     echo "Quit"
