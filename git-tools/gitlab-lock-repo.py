@@ -23,7 +23,7 @@ print(project_name_with_namespace)
 
 project = gl.projects.get(project_name_with_namespace)
 if (new_description_template):
-    project.description = new_description_template % project.name.lower()
+    project.description = new_description_template % project.name.lower().replace(' ', '-')
     project.save()
     print(project)
 

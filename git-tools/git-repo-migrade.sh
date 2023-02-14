@@ -33,18 +33,22 @@ if [ "$CONT" = "y" ]; then
   rm -rf "$FROM_BASEDIR"
   set +xe
   echo "########################################################################################"
-  echo '# ......................................................................................'
   echo "# now go to project host and paste the following commands on terminal:"
-  echo cd  "$FROM_BASEDIR"
+  echo "# entrar no servidor e acessar dir do projeto. (Ex: ssh root@... && cd  '$FROM_BASEDIR')"
   echo git log -n 1
   echo 'CURRBRANCH=$(git rev-parse --abbrev-ref HEAD)'
   echo 'echo branch atual: $CURRBRANCH'
   echo git remote rename origin gitlab
   echo git remote add origin "$TO_REPO"
-  echo 'less ~/.ssh/*.pub'
+  echo "echo -e '\n\n\n' && cat ~/.ssh/*.pub && echo -e '\n\n\n'"
   echo git fetch --all
   echo git branch -r
   echo 'git branch --set-upstream-to=origin/$CURRBRANCH || echo there wasnt current branch, but its ok'
+  echo '# ......................................................................................'
+  echo "# now lets replace the occurences of $FROM_REPO and change em for $TO_REPO"
+  echo 'cd devops/devops-deploy'
+  echo "find . -path '*/.git/*' -prune -o -type f -exec sed -i 's|$FROM_REPO|$TO_REPO|g' {} +"
+  echo ''
   echo "########################################################################################"
   echo "# travar a master de $FROM_REPO e mudar descrição do projeto:"
   echo "# crie um .env (veja .env.sample)"
