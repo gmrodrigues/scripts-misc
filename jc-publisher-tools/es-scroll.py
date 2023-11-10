@@ -11,7 +11,7 @@ search_body = {
             "must": [
                 {
                     "term": {
-                        "storeId": "747"
+                        "storeId": "733"
                     }
                 }
             ],

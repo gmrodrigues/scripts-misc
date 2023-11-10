@@ -44,8 +44,21 @@ new_p_branch = project.protectedbranches.create({
     'push_access_level': 0
 })
 p_branches = project.protectedbranches.list()
-print(p_branches)
+# print branche names with current description
+for p_branch in p_branches:
+    print(p_branch.name)
+    print(p_branch)
 
+# list project members (name, email, access level)
+members = project.members.list()
+for member in members:
+    print(member.name)
+    print(member.email)
+    print(member.access_level)
+# if no project members, display message
+if not members:
+    print('No members')
+    
 # Change description
 
 

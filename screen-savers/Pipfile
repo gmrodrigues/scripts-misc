@@ -4,12 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-gitlab = "*"
-python-dotenv = "*"
-requests = "*"
-python-gitlab = "*"
-mido = "*"
-rtmidi = "*"
+pygame = "*"
+numpy = "*"
+noise = "*"
+pyopengl = "*"
+pymesh = "*"
 
 [dev-packages]
 
