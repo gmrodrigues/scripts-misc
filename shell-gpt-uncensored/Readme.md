@@ -39,3 +39,4 @@ aqui esta uma lista dos modelos disponiveis:
 
 ![image](llama2-censored.png)
 
+Nada haver
