@@ -22,4 +22,4 @@ echo "$SERVICE está rodando."
 echo "Executando comando no container $CONTAINER_NAME..."
 echo dica de prompt: conte uma piada ácida sobre elon musk -- llama2-uncensored
 
-docker exec -it $CONTAINER_NAME ollama run llama2-uncensored
+docker-compose exec ollama ollama run llama2-uncensored
