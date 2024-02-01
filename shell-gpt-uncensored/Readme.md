@@ -36,7 +36,6 @@ aqui esta uma lista dos modelos disponiveis:
 
 ![image](llama2-un-censored.png)
 
+Nada haver
 
 ![image](llama2-censored.png)
-
-Nada haver
