@@ -3,8 +3,8 @@
 use strict;
 use warnings;
 
-my $FROM_SERVER='10.33.245.222'; # change here
-my $TO_SERVER='177.153.231.114'; # change here
+my $FROM_SERVER=''; # change here
+my $TO_SERVER=''; # change here
 my $CSV_PATH='/storage/tmp'; # change here
 
 my $KEYSPACE='btg360'; # change here
