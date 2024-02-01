@@ -30,3 +30,12 @@ https://www.youtube.com/watch?v=UJjCCTUYPrw
 
 aqui esta uma lista dos modelos disponiveis:
  https://ollama.ai/library
+
+
+ É o que tem pra janta.
+
+![image](llama2-un-censored.png)
+
+
+![image](llama2-censored.png)
+
