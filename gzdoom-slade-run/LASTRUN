@@ -1,0 +1,1 @@
+gzdoom -iwad /home/glauberrodrigues/arquivos/game/wad/freedoom2.wad -file /home/glauberrodrigues/arquivos/game/wad/mygame.wad /home/glauberrodrigues/.slade3/temp/sladetemp_run.wad +map MAP01
