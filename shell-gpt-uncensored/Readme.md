@@ -9,6 +9,10 @@ Para rodar no navegador:
 ```
 ![image](llama2-uncensored-webui.png)
 
+Rapaz, eu vou te falar hein...
+
+Maninhos e maninhas, tamo ferrado.
+
 Para rodar no terminal:
 ```Shell
 ./shell-gpt.sh
