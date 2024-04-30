@@ -1,0 +1,13 @@
+{
+    "jira-plugin.workingProject": "",
+    "sqltools.connections": [
+        {
+            "server": "177.153.231.114",
+            "port": 9042,
+            "previewLimit": 50,
+            "askForPassword": true,
+            "driver": "Cassandra",
+            "name": "cassandra homol"
+        }
+    ]
+}

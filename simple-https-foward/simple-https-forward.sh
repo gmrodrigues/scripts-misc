@@ -17,12 +17,6 @@ http {
     sendfile on;
 
     server {
-        listen 80;
-        server_name yourdomain.com;
-        return 301 https://\$server_name\$request_uri;
-    }
-
-    server {
         listen 443 ssl;
         server_name yourdomain.com;
         access_log /dev/stdout;
