@@ -16,7 +16,7 @@ HOUR=$1
 MINUTE=$2
 
 DIALOG_CMD="/usr/bin/zenity"
-TIMEOUT='00:05:00'
+TIMEOUT='05:00'
 SHUTDOWN_CMD="/sbin/shutdown -P $TIMEOUT"
 ABSOLUTE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CANCEL_SHUTDOWN_CMD="bash $ABSOLUTE_DIR/gcronshutdown-cancel.sh"
