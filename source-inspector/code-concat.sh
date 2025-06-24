@@ -19,6 +19,7 @@ echo "Gerando concatenação dos seguintes arquivos:" >&2
 for file in $(find . -type f \( \
     -name "*.yaml" -o \
     -name "*.yml" -o \
+    -name "*.txt" -o \
     -name "*.md" -o \
     -name "*.sh" -o \
     -name "*.conf" -o \
