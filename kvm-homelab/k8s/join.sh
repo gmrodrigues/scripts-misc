@@ -1,0 +1,1 @@
+kubeadm join k8s-api.lab.local:6443 --token gwfktz.rqkn6gw4tgolxnob --discovery-token-ca-cert-hash sha256:ccce41445a6e8e34cad7af2fdb1d2b39e9f3d383b31d89fc880083e421e676b5 
